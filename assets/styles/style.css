@@ -70,6 +70,9 @@ body {
   margin-right: 1rem;
 }
 
+/*
+Items Container
+*/
 .items {
   display: flex;
   justify-content: center;
@@ -92,7 +95,13 @@ body {
   justify-content: space-between;
   width: 100%;
 }
-
+.items__footer__lefts {
+  margin-left: 1rem;
+}
+.items__footer__clear {
+  margin-right: 1rem;
+  cursor: pointer;
+}
 .item {
   display: flex;
   justify-content: space-between;
@@ -103,13 +112,62 @@ body {
 }
 .item__container {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 1rem;
+}
+.item__container__checked {
+  cursor: pointer;
 }
 .item__container__item {
   font-size: 1rem;
+  color: hsl(235deg, 19%, 35%);
 }
 .item button {
   border: none;
   background-color: transparent;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.completed {
+  background: linear-gradient hsl(192deg, 100%, 67%) to hsl(280deg, 87%, 65%);
+  background-image: url("../images/icon-check.svg");
+}
+
+/*
+Filter box
+*/
+.filterbox {
+  display: flex;
+  justify-content: center;
+  background-color: hsl(0deg, 0%, 98%);
+  width: 90%;
+  margin: 1.5rem auto;
+  padding: 1rem 0;
+  border-radius: 0.4rem;
+}
+
+p {
+  font-weight: 700;
+  color: hsl(236deg, 9%, 61%);
+  cursor: pointer;
+}
+
+p.active {
+  color: hsl(220deg, 98%, 61%);
+}
+p.active > *:not(last-child) {
+  margin-right: 1.5rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  color: hsl(236deg, 9%, 61%);
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-top: 3.75rem;
 }
 
 /*# sourceMappingURL=style.css.map */
