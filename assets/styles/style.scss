@@ -6,6 +6,10 @@ $check-bg: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
 
 
 // Light theme colors
+$light: hsl(0, 0%, 98%);
+$todo-text: hsl(235, 19%, 35%);
+$filters: hsl(236, 9%, 61%);
+
 * {
   margin: 0;
   padding: 0;
@@ -82,6 +86,10 @@ body {
   margin-right: 1rem;
 }
 
+/*
+Items Container
+*/
+
 .items {
   display: flex;
   justify-content: center;
@@ -104,6 +112,23 @@ body {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+
+    &__lefts {
+      margin-left: 1rem;
+    }
+
+    &__clear {
+      margin-right: 1rem;
+      cursor: pointer;
+    }
+
+    &__clear:hover {
+
+    }
+
+    &__clear:hover{
+
+    }
   }
 }
 
@@ -117,11 +142,17 @@ body {
 
   &__container {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1rem;
 
-    &__checked {}
+    &__checked {
+      cursor: pointer;
+    }
 
     &__item {
       font-size: 1rem;
+      color: $todo-text;
     }
 
   }
@@ -129,5 +160,49 @@ body {
   button {
     border: none;
     background-color: transparent;
+    margin-right: 1rem;
+    cursor: pointer;
   }
+}
+
+.completed{
+  background: $check-bg;
+  background-image: url('../images/icon-check.svg');
+}
+
+/*
+Filter box
+*/
+.filterbox{
+  display:flex;
+  justify-content: center;
+  background-color: $light;
+  width: 90%;
+  margin: 1.5rem auto;
+  padding: 1rem 0;
+  border-radius: 0.4rem;
+}
+
+p{
+  font-weight: 700;
+  color: $filters;
+  cursor: pointer;
+}
+
+p.active{
+  color: $link-active;
+
+
+  > *:not(last-child){
+    margin-right: 1.5rem;
+  }
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
+  color: $filters;
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-top: 3.75rem;
 }
